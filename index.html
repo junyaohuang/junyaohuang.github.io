@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,313 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-JavaScript Array 对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/23/JavaScript Array 对象/" class="article-date">
+  <time datetime="2017-10-23T00:58:41.656Z" itemprop="datePublished">2017-10-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JavaScript-Array-对象"><a href="#JavaScript-Array-对象" class="headerlink" title="JavaScript Array 对象"></a>JavaScript Array 对象</h1><hr>
+<h3 id="数组是值的有序集合。每个值叫做一个元素，而每个元素在数组中有一个位置，以数字表示，称为索引。JavaScript数组是无类型：数组元素可以是任意类型，并且同一个数组中的不同元素也可能有不同的类型。"><a href="#数组是值的有序集合。每个值叫做一个元素，而每个元素在数组中有一个位置，以数字表示，称为索引。JavaScript数组是无类型：数组元素可以是任意类型，并且同一个数组中的不同元素也可能有不同的类型。" class="headerlink" title="数组是值的有序集合。每个值叫做一个元素，而每个元素在数组中有一个位置，以数字表示，称为索引。JavaScript数组是无类型：数组元素可以是任意类型，并且同一个数组中的不同元素也可能有不同的类型。"></a>数组是值的有序集合。每个值叫做一个元素，而每个元素在数组中有一个位置，以数字表示，称为索引。JavaScript数组是无类型：数组元素可以是任意类型，并且同一个数组中的不同元素也可能有不同的类型。</h3><h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li>Array对象</li>
+<li>创建Array对象的语法</li>
+<li>参数</li>
+<li>返回值</li>
+<li>Array的对象属性</li>
+<li>Array的对象方法</li>
+<li>Array的常用方法</li>
+</ol>
+<h3 id="Array对象："><a href="#Array对象：" class="headerlink" title="Array对象："></a>Array对象：</h3><p>Ayyay对象可以在单个的变量中存储多个值</p>
+<h3 id="创建Array对象的语法："><a href="#创建Array对象的语法：" class="headerlink" title="创建Array对象的语法："></a>创建Array对象的语法：</h3><pre><code>new Array();
+new Array(size);
+new Array(element0,element1,....,element);
+</code></pre><h3 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h3><p>参数size是期望的数组元素的个数，返回的数组，length字段将被设为size的值</p>
+<p>参数element，…elementn是参数列表。当使用这些参数来调用构造函数Array()时，它的length字段也被设置为参数的个数</p>
+<h3 id="返回值："><a href="#返回值：" class="headerlink" title="返回值："></a>返回值：</h3><p>返回新创建并被初始化了的数组</p>
+<p>如果调用构造函数 Array() 时没有使用参数，那么返回的数组为空，length 字段为 0。</p>
+<p>当调用构造函数时只传递给它一个数字参数，该构造函数将返回具有指定个数、元素为 undefined 的数组。</p>
+<p>当其他参数调用 Array() 时，该构造函数将用参数指定的值初始化数组。</p>
+<p>当把构造函数作为函数调用，不使用 new 运算符时，它的行为与使用 new 运算符调用它时的行为完全一样。</p>
+<h3 id="Array的对象属性"><a href="#Array的对象属性" class="headerlink" title="Array的对象属性"></a>Array的对象属性</h3><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>返回对创建此对象的数组函数的引用</td>
+</tr>
+<tr>
+<td>length</td>
+<td>设置或返回数组中元素的数目</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>是您有能力项向对象添加属性和方法</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Array对象方法"><a href="#Array对象方法" class="headerlink" title="Array对象方法"></a>Array对象方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>concat()</td>
+<td>连接两个或更多的数组，并返回结果</td>
+</tr>
+<tr>
+<td>join()</td>
+<td>把数组的所有元素放入一个字符串，元素通过指定的分割符进行分隔</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>删除并返回数组的最后一个元素</td>
+</tr>
+<tr>
+<td>push()</td>
+<td>向数组的末尾添加一个或更多元素，并返回新的元素</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>点到数组中数组的顺序</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td>删除并返回数组的第一个元素</td>
+</tr>
+<tr>
+<td>slice()</td>
+<td>从某个已有的上诉状是返回选定的元素</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>对数组的元素进行排序</td>
+</tr>
+<tr>
+<td>splice()</td>
+<td>删除元素，并向数组添加新元素</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>把数组转换为字符串，并返回结果</td>
+</tr>
+<tr>
+<td>toSource()</td>
+<td>返回该数组的源代码</td>
+</tr>
+<tr>
+<td>toLocaleString()</td>
+<td>把数组转换为本地数组，并返回结果</td>
+</tr>
+<tr>
+<td>unshift()</td>
+<td>向数组的开头添加一个或更过元素，并返回新的长度</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>返回数组对象的原始值</td>
+</tr>
+</tbody>
+</table>
+<h3 id="常用方法："><a href="#常用方法：" class="headerlink" title="常用方法："></a>常用方法：</h3><ol>
+<li><p>unshift():可向数组开头添加一个或封过元素，并返回不新的长度</p>
+<p> 语法：arrayObject.unshift(newele1,newele2,….,neweX)</p>
+<p> 返回值：把指定的值添加到数组后的新长度。</p>
+<p> 说明：unshift() 方法将把它的参数插入 arrayObject 的头部，并将已经存在的元素顺次地移到较高的下标处，以便留出空间。该方法的第一个参数将成为数组的新元素 0，如果还有第二个参数，它将成为新的元素 1，以此类推。<br> 请注意，unshift() 方法不创建新的创建，而是直接修改原有的数组。<br> 示例：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+     var arr = new Array()
+     arr[0] = &quot;George&quot;
+     arr[1] = &quot;John&quot;
+     arr[2] = &quot;Thomas&quot;
+     document.write(arr + &quot;&lt;br /&gt;&quot;)
+     document.write(arr.unshift(&quot;William&quot;) + &quot;&lt;br /&gt;&quot;)
+     document.write(arr)
+
+ &lt;/script&gt;
+
+ 输出结果：
+     George,John,Thomas
+     4
+     William,George,John,Thomas
+</code></pre></li>
+<li><p>shift()：用于把数组的第一个元素从其中删除，并返回第一个元素的值。</p>
+<p> 语法：arrayObject.shift()</p>
+<p> 返回值：数组原来的第一个元素的值。</p>
+<p> 说明：如果数组是空的，那么 shift() 方法将不进行任何操作，返回 undefined 值。请注意，该方法不创建新数组，而是直接修改原有的 arrayObject。</p>
+<p> 示例：</p>
+</li>
+</ol>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+    var arr = new Array(3)
+    arr[0] = &quot;George&quot;
+    arr[1] = &quot;John&quot;
+    arr[2] = &quot;Thomas&quot;
+
+    document.write(arr + &quot;&lt;br /&gt;&quot;)
+    document.write(arr.shift() + &quot;&lt;br /&gt;&quot;)
+    document.write(arr)
+
+&lt;/script&gt;
+
+输出结果：
+    George,John,Thomas
+    George
+    John,Thomas
+</code></pre><ol>
+<li><p>pop():用于删除并返回数组的最后一个元素。</p>
+<p> 语法：arrayObject.pop()</p>
+<p> 返回值:被删除的那个元素</p>
+<p> 说明: pop() 方法将删除 arrayObject 的最后一个元素，把数组长度减 1，并且返回它删除的元素的值。如果数组已经为空，则 pop() 不改变数组，并返回 undefined 值。</p>
+<p> 示例：</p>
+</li>
+</ol>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+    var arr = new Array(3)
+    arr[0] = &quot;George&quot;
+    arr[1] = &quot;John&quot;
+    arr[2] = &quot;Thomas&quot;
+
+    document.write(arr)
+
+    document.write(&quot;&lt;br /&gt;&quot;)
+
+    document.write(arr.pop())
+
+    document.write(&quot;&lt;br /&gt;&quot;)
+
+    document.write(arr)
+
+&lt;/script&gt;
+
+输出结果：
+    George,John,Thomas
+    Thomas
+    George,John
+</code></pre><ol>
+<li><p>push()：可向数组的末尾添加一个或多个元素，并返回新的长度。</p>
+<p> 语法：arrayObject.push(newele1,newele2,….,neweX)</p>
+<p> 返回值：把指定的值添加到数组后的新长度。</p>
+<p> 说明：push() 方法可把它的参数顺序添加到 arrayObject 的尾部。它直接修改 arrayObject，而不是创建一个新的数组。push() 方法和 pop() 方法使用数组提供的先进后出栈的功能。</p>
+<p> 示例：</p>
+</li>
+</ol>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+    var arr = new Array(3)
+    arr[0] = &quot;George&quot;
+    arr[1] = &quot;John&quot;
+    arr[2] = &quot;Thomas&quot;
+
+    document.write(arr + &quot;&lt;br /&gt;&quot;)
+    document.write(arr.push(&quot;James&quot;) + &quot;&lt;br /&gt;&quot;)
+    document.write(arr)
+
+&lt;/script&gt;
+输出结果：
+    George,John,Thomas
+    4
+    George,John,Thomas,James
+</code></pre><ol>
+<li><p>join()：用于把数组中的所有元素放入一个字符串。</p>
+<p> 语法：arrayObject.join(separator)</p>
+<p> 返回值：字符串</p>
+<p> 说明：返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。</p>
+<p> 示例：</p>
+</li>
+</ol>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+    var arr = new Array(3)
+    arr[0] = &quot;George&quot;
+    arr[1] = &quot;John&quot;
+    arr[2] = &quot;Thomas&quot;
+
+    document.write(arr.join())
+
+&lt;/script&gt;
+输出结果：
+    George,John,Thomas
+</code></pre><ol>
+<li><p>reverse():用于颠倒数组中元素的顺序。</p>
+<p> 语法：stringObject.reverse()</p>
+<p> 返回值：数组</p>
+<p> 示例：</p>
+</li>
+</ol>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+    var arr = new Array(3)
+    arr[0] = &quot;George&quot;
+    arr[1] = &quot;John&quot;
+    arr[2] = &quot;Thomas&quot;
+
+    document.write(arr + &quot;&lt;br /&gt;&quot;)
+    document.write(arr.reverse())
+
+&lt;/script&gt;
+输出结果：
+    George,John,Thomas
+    Thomas,John,George
+</code></pre><p>7.sort()：对数组的元素进行排序</p>
+<pre><code>语法：arrayObject.sort(sortby)
+
+返回值：数组
+
+说明：
+如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序，说得更精确点，是按照字符编码的顺序进行排序。要实现这一点，首先应把数组的元素都转换成字符串（如有必要），以便进行比较。
+
+如果想按照其他标准进行排序，就需要提供比较函数，该函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。比较函数应该具有两个参数 a 和 b，其返回值如下：
+若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+若 a 等于 b，则返回 0。
+若 a 大于 b，则返回一个大于 0 的值。
+</code></pre><p>示例：</p>
+<pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+
+    var arr = new Array(6)
+    arr[0] = &quot;George&quot;
+    arr[1] = &quot;John&quot;
+    arr[2] = &quot;Thomas&quot;
+    arr[3] = &quot;James&quot;
+    arr[4] = &quot;Adrew&quot;
+    arr[5] = &quot;Martin&quot;
+
+    document.write(arr + &quot;&lt;br /&gt;&quot;)
+    document.write(arr.sort())
+
+&lt;/script&gt;
+输出结果：
+    George,John,Thomas,James,Adrew,Martin
+    sAdrew,George,James,John,Martin,Thomas
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/23/JavaScript Array 对象/" data-id="cj942sc2t0001mgrjhf05zd8n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -96,7 +403,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cj941xrp80000ekrj0felkzgk" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/10/14/hello-world/" data-id="cj942sc2m0000mgrjoluy4zma" class="article-share-link">Share</a>
       
       
     </footer>
@@ -121,7 +428,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
     </div>
@@ -131,9 +438,13 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/10/23/JavaScript Array 对象/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2017/10/14/hello-world/">Hello World</a>
@@ -152,7 +463,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
